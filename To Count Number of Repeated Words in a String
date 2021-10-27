@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class CodesCracker
+{
+   public static void main(String args[])
+   {
+      String mystr, word;
+      int len, i, count, j, k, repeated=0;
+      Scanner s = new Scanner(System.in);
+      
+      System.out.print("Enter the String: ");
+      mystr = s.nextLine();
+      
+      String wordArray[] = mystr.split(" ");
+      len = wordArray.length;
+      
+      for(i=0; i<len; i++)
+      {
+         word = wordArray[i];
+         count = 1;
+         for(j=(i+1); j<(len-1); j++)
+         {
+            if(word.equals(wordArray[j]))
+            {
+               count++;
+               for(k=j; k<(len-1); k++)
+               {
+                  wordArray[k] = wordArray[k+1];
+               }
+               len--;
+               j--;
+            }
+         }
+         if(count>1)
+            repeated++;
+         count = 0;
+      }
+      
+      System.out.println("\nTotal Repeated Words = " +repeated);
+   }
+}
