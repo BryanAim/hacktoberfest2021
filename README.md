@@ -1,6 +1,6 @@
 ## Rules
 
-- Don't use filthy words and be welcome for beginners and other people in this community.
+- Don't use filthy words and for the beginners and other people in this community, feel most welcomed.
 
 ---
 
